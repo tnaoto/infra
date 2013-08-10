@@ -1,5 +1,12 @@
 {
 	"run_list":[
-	   "recipe[dhcp]"
-	]
+	   "recipe[dhcp]",
+	   "recipe[iptables]"
+	],
+	"iptables":{
+       "WAN_NIC":"eth0",
+       "LAN_NIC":"eth1",
+       "LAN_NETADDR":"192.168.112.0",
+       "LAN_NETMASK":"255.255.255.0"
+	}
 }
