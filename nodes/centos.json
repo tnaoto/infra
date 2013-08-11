@@ -1,12 +1,16 @@
 {
 	"run_list":[
 	   "recipe[dhcp]",
-	   "recipe[iptables]"
+	   "recipe[iptables]",
+	   "recipe[manager]"
 	],
 	"iptables":{
        "WAN_NIC":"eth0",
        "LAN_NIC":"eth1",
        "LAN_NETADDR":"192.168.112.0",
        "LAN_NETMASK":"255.255.255.0"
+	},
+	"nginx":{
+		"port":81
 	}
 }

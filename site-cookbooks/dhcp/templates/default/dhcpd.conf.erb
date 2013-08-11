@@ -6,4 +6,7 @@ subnet 192.168.112.0 netmask 255.255.255.0 {
   option domain-name-servers 192.168.111.1;
   default-lease-time 21600;
   max-lease-time  43200;
+  filename "/pxelinux.0";
+  next-server 192.168.112.1; 
+  range dynamic-bootp 192.168.112.241 192.168.112.250;
 }

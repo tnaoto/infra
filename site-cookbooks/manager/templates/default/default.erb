@@ -1,0 +1,5 @@
+default centos
+
+label centos
+kernel vmlinuz
+append ks=http://192.168.112.1:81/ks.cfg load initrd=initrd.img devfs=nomount RUNKS=1
